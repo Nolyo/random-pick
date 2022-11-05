@@ -7,9 +7,25 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if (msg.content === 'ping') {
-        msg.reply('pong');
+    const message = msg.content.split(' ');
+    if (!message.length) return;
+    const commandName = message.shift();
+    if (commandName === '/daily') {
+        const countPeople = message.length;
+        const ordered = [];
+        
+        for (let i = 0; i < countPeople; i++) {
+            const randomIndex = Math.floor(Math.random() * message.length);
+            const item = message[randomIndex];
+            message.splice(randomIndex, 1);
+            ordered.push(item);
+            console.log(randomIndex);
+        }
+
+
+        msg.reply(`Order for the daily (${countPeople} persons: ${ordered.join(', ')}`);
     }
 });
 
 client.login(botSettings.token);
+
