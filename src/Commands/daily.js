@@ -9,21 +9,13 @@ module.exports = {
 		description: "Who talk ? default: Hugo William Yohann",
 		required: false
 	}],
-	async run(bot, msg, args) {
-		let members = ['Hugo', 'William', 'Yohann'];
-
-		if (args.get('members')) {
-			members = args.get('members').value.split(' ');
-		}
-
-		if (!members.length) msg.reply(`Members not found`);
-
+	makeEmbed: function (members) {
 		const countPeople = members.length;
 		/** @type {APIEmbedField[]}*/
 		const ordered = [];
 
 		for (let i = 0; i < countPeople; i++) {
-			const randomIndex = Math.floor(Math.random() * members.length);
+			const randomIndex = this.randomIntFromInterval(0, members.length - 1);
 			const nameMember = members[randomIndex];
 			members.splice(randomIndex, 1);
 			ordered.push({name: `Position ${i + 1}`, value: nameMember, inline: true});
@@ -35,8 +27,7 @@ module.exports = {
 			url: 'https://meet.google.com/voh-sbqp-kcz',
 			author: {
 				name: 'Daily Bot',
-				// icon_url: 'https://imgur.com/qS99IiV',
-				url: 'https://discord.js.org',
+				url: 'https://meet.google.com/voh-sbqp-kcz',
 			},
 			description: 'The daily will be start',
 			thumbnail: {
@@ -49,6 +40,21 @@ module.exports = {
 				text: 'See you soon !',
 			},
 		};
+		return exampleEmbed;
+	},
+	randomIntFromInterval: function (min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min)
+	},
+	async run(bot, msg, args) {
+		let members = ['Hugo', 'William', 'Yohann'];
+
+		if (args.get('members')) {
+			members = args.get('members').value.split(' ');
+		}
+
+		if (!members.length) msg.reply(`Members not found`);
+
+		const exampleEmbed = this.makeEmbed(members);
 
 		msg.reply({embeds: [exampleEmbed]})
 	},

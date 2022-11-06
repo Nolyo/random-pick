@@ -10,7 +10,7 @@ module.exports = {
 			description: 'type / for start autocomplete',
 			fields: [
 				{name: 'help', value: '- show list of commands'},
-				{name: 'daily', value: '- set a random order for daily'},
+				{name: 'daily', value: '- set a random order for daily (default: Hugo William Yohann)'},
 				{name: 'ping', value: '- show ping with API discord'}
 			],
 
