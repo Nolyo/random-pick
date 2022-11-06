@@ -54,7 +54,13 @@ bot.on('ready', async () => {
 		const webhook = new WebhookClient({
 			url: process.env.URL_WEBHOOK
 		});
-
+		const welcomeEmbed = {
+			"type": "rich",
+			"title": `Bot daily alert`,
+			"description": `Hello @tech, I am a hook that will notify you every day of the week to give you the order for the daily\nI'll come by to say hello in the morning at 11:55 a.m. (Paris time)`,
+			"color": 0x00FFFF
+		}
+		await webhook.send({embeds: [welcomeEmbed]});
 		// 55 11 * * Mon-Fri || * * * * *
 		await cron.schedule('55 11 * * Mon-Fri', () => {
 			webhook.send({embeds: [makeEmbed(['Hugo', 'William', 'Yohann'])]});
