@@ -1,31 +1,13 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const botSettings = require("./botsettings.json");
+const intents = new Discord.IntentsBitField(3276799);
+const bot = new Discord.Client({intents});
+const loadCommands = require('./Loaders/LoadCommands');
+const loadEvents = require('./Loaders/LoadEvents');
+const config = require('./botsettings.json');
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-});
+bot.commands = new Discord.Collection();
 
-client.on('message', msg => {
-    const message = msg.content.split(' ');
-    if (!message.length) return;
-    const commandName = message.shift();
-    if (commandName === '/daily') {
-        const countPeople = message.length;
-        const ordered = [];
-        
-        for (let i = 0; i < countPeople; i++) {
-            const randomIndex = Math.floor(Math.random() * message.length);
-            const item = message[randomIndex];
-            message.splice(randomIndex, 1);
-            ordered.push(item);
-            console.log(randomIndex);
-        }
+bot.login(config.token);
 
-
-        msg.reply(`Order for the daily (${countPeople} persons: ${ordered.join(', ')}`);
-    }
-});
-
-client.login(botSettings.token);
-
+loadCommands(bot);
+loadEvents(bot);
