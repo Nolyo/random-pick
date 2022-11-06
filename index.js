@@ -48,6 +48,8 @@ function makeEmbed(members) {
 }
 
 bot.on('ready', async () => {
+	console.log(`${bot.user.tag} is online`);
+	console.log(`Server time : ${new Date().toLocaleString()}`);
 	try {
 		const webhook = new WebhookClient({
 			url: process.env.URL_WEBHOOK
