@@ -54,7 +54,7 @@ bot.on('ready', async () => {
 		});
 
 		// 55 11 * * Mon-Fri || * * * * *
-		await cron.schedule('* * * * *', () => {
+		await cron.schedule('55 11 * * Mon-Fri', () => {
 			webhook.send({embeds: [makeEmbed(['Hugo', 'William', 'Yohann'])]});
 		});
 	} catch (e) {
