@@ -5,5 +5,3 @@ services:
       env_file: .env
       build: .
       restart: always
-      ports:
-        - "3002:3002"
