@@ -26,12 +26,8 @@ function makeEmbed(members) {
 
 	const exampleEmbed = {
 		color: 0x0099ff,
-		title: 'Daily Order',
+		title: 'Join meet',
 		url: 'https://meet.google.com/voh-sbqp-kcz',
-		author: {
-			name: 'Daily Bot',
-			url: 'https://meet.google.com/voh-sbqp-kcz',
-		},
 		description: 'The daily will be start',
 		thumbnail: {
 			url: 'https://i.imgur.com/qS99IiV.png',
