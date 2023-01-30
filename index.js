@@ -59,7 +59,7 @@ bot.on('ready', async () => {
 		await webhook.send({embeds: [welcomeEmbed]});
 		// 55 11 * * Mon-Fri || * * * * *
 		await cron.schedule('55 11 * * Mon-Fri', () => {
-			webhook.send({embeds: [makeEmbed(['Hugo', 'William', 'Yohann'])]});
+			webhook.send({embeds: [makeEmbed(['William', 'Yohann'])]});
 		});
 	} catch (e) {
 		console.error(e);
