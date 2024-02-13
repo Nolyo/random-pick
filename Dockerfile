@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . /usr/src/bot
 
-CMD ["node", "index.js"]
+CMD ["npm", "start"]

@@ -1,0 +1,35 @@
+{
+  "welcomeMessage": {
+    "type": "rich",
+    "description": "Hello @bot, I am a hook that will notify you every day of the week to give you the order for the daily\nI'll come by to say hello in the morning at 11:55 a.m. (Paris time)",
+    "title": "Bot daily alert",
+    "color": "0x00FFFF"
+  },
+  "classicMessage": {
+    "description": "The daily will be start",
+    "title": "Join meet",
+    "color": "0x0099ff",
+    "url": "https://meet.google.com/agc-rmjo-zore",
+    "thumbnail": {
+      "url": "https://i.imgur.com/qS99IiV.png"
+    },
+    "footer": {
+      "text": "See you soon !"
+    }
+  },
+  "users": [
+    {
+      "name": "user1",
+      "activated": "true"
+    },
+    {
+      "name": "user2",
+      "activated": "true"
+    },
+    {
+      "name": "user3",
+      "activated": "false"
+    }
+  ],
+  "cron": "* * * * *"
+}
