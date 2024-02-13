@@ -6,9 +6,8 @@ A simple bot that picks a random order of a list of names for your daily standup
 
 ### How to install
 
-`git clone https://github.com/Nolyo/random-pick`
-
 ```bash
+git clone https://github.com/Nolyo/random-pick
 cd random-pick
 npm install
 ```
