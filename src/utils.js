@@ -6,7 +6,6 @@ export function makeEmbed(members, data) {
   const ordered = [];
 
   for (let i = 0; i < countPeople; i++) {
-    console.log("test for workflow");
     const randomIndex = randomIntFromInterval(0, members.length - 1);
     const nameMember = members[randomIndex];
     members.splice(randomIndex, 1);
