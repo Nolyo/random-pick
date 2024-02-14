@@ -1,35 +1,103 @@
 {
   "welcomeMessage": {
     "type": "rich",
-    "description": "Hello @bot, I am a hook that will notify you every day of the week to give you the order for the daily\nI'll come by to say hello in the morning at 11:55 a.m. (Paris time)",
+    "description": "Hello <@&939910712170541136>, I am a hook that will notify you every day of the week to give you the order for the daily\nI'll come by to say hello in the morning at 11:55 a.m. (Paris time)",
     "title": "Bot daily alert",
     "color": "0x00FFFF"
   },
-  "classicMessage": {
-    "description": "The daily will be start",
-    "title": "Join meet",
-    "color": "0x0099ff",
-    "url": "https://meet.google.com/agc-rmjo-zore",
-    "thumbnail": {
-      "url": "https://i.imgur.com/qS99IiV.png"
+  "jobs": [
+    {
+      "name": "job1",
+      "activated": "false",
+      "cron": "1,3,5,7,47 * * * *",
+      "classicMessage": {
+        "description": "The daily will be start",
+        "title": "Join meet",
+        "color": "0x0099ff",
+        "url": "https://meet.google.com/agc-rmjo-zore",
+        "thumbnail": {
+          "url": "https://i.imgur.com/qS99IiV.png"
+        },
+        "footer": {
+          "text": "See you soon !"
+        }
+      },
+      "users": [
+        {
+          "name": "user1",
+          "activated": "true"
+        },
+        {
+          "name": "user2",
+          "activated": "true"
+        },
+        {
+          "name": "user3",
+          "activated": "false"
+        }
+      ]
     },
-    "footer": {
-      "text": "See you soon !"
+    {
+      "name": "job2",
+      "activated": "true",
+      "cron": "*/2 * * * *",
+      "classicMessage": {
+        "description": "The daily 2 will be start",
+        "title": "Join meet",
+        "color": "0x0099ff",
+        "url": "https://meet.google.com/agc-rmjo-zore",
+        "thumbnail": {
+          "url": "https://i.imgur.com/qS99IiV.png"
+        },
+        "footer": {
+          "text": "See you soon !"
+        }
+      },
+      "users": [
+        {
+          "name": "user1",
+          "activated": "true"
+        },
+        {
+          "name": "user2",
+          "activated": "true"
+        },
+        {
+          "name": "user3",
+          "activated": "false"
+        }
+      ]
+    },
+    {
+      "name": "job3",
+      "activated": "false",
+      "cron": "05 11 * * Mon-Fri",
+      "classicMessage": {
+        "description": "The daily will be start",
+        "title": "Join meet",
+        "color": "0x0099ff",
+        "url": "https://meet.google.com/agc-rmjo-zore",
+        "thumbnail": {
+          "url": "https://i.imgur.com/qS99IiV.png"
+        },
+        "footer": {
+          "text": "See you soon !"
+        }
+      },
+      "users": [
+        {
+          "name": "user1",
+          "activated": "true"
+        },
+        {
+          "name": "user2",
+          "activated": "true"
+        },
+        {
+          "name": "user3",
+          "activated": "false"
+        }
+      ]
     }
-  },
-  "users": [
-    {
-      "name": "user1",
-      "activated": "true"
-    },
-    {
-      "name": "user2",
-      "activated": "true"
-    },
-    {
-      "name": "user3",
-      "activated": "false"
-    }
-  ],
-  "cron": "* * * * *"
+  ]
 }

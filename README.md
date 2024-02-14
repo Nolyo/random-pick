@@ -29,13 +29,13 @@ if you don't see your token, click on `Bot` in the left menu and then `Reset Tok
 
 You should activate Intents privileged gateway intents in the `Bot` section of your bot settings. (\*2)
 
-![alt text](img/bot-token.png)
+![Token bot example](img/bot-token.png)
 
 ### Webhook url
 
 Create a new webhook in the channel you want the bot to send messages to. Go to the channel settings, `Integrations` and `Webhooks`. Create a new webhook and copy the url.
 
-![alt text](img/webhook.png)
+![webhook example](img/webhook.png)
 
 ## How to run
 
@@ -58,10 +58,20 @@ docker-compose up -d --build
 npm start
 ```
 
+## How to use
+
+- update `src/config.json` with the list of jobs alerts you want to use
+- If you want use mention: [Discord mention documentation](https://v12.discordjs.guide/miscellaneous/parsing-mention-arguments.html#how-discord-mentions-work)
+
 ## Comming soon
 
 This project is still in development and will be updated regularly. Here are some features that will be added soon:
 
-- [ ] Better user configuration
-- [ ] Better cron configuration
+- [x] Better user configuration
+- [x] Better cron configuration
+- [x] Docker support
+- [ ] Add tests
+- [ ] Add CI/CD
+- [ ] Better error handling
+- [ ] Better documentation
 - [ ] Interface for dynamic configuration (cron, users, etc) ?
