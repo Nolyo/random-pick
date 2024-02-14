@@ -29,7 +29,6 @@ bot.once(Events.ClientReady, async (readyClient) => {
     await webhook.send({ embeds: [welcomeEmbed] });
 
     scheduleJobs(data.default, webhook);
-    console.log("it's ok");
   } catch (e) {
     console.error(e);
   }
