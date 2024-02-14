@@ -1,7 +1,6 @@
+import { expect, test, afterEach, jest } from "@jest/globals";
 import { scheduleJobs } from "../src/utils";
-import { WebhookClient } from "discord.js";
 import cron from "node-cron";
-import { jest } from "@jest/globals";
 
 afterEach(() => {
   jest.restoreAllMocks();

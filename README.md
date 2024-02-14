@@ -70,8 +70,8 @@ This project is still in development and will be updated regularly. Here are som
 - [x] Better user configuration
 - [x] Better cron configuration
 - [x] Docker support
-- [ ] Add tests
-- [ ] Add CI/CD
+- [x] Add tests
+- [x] Add CI/CD
 - [ ] Better error handling
 - [ ] Better documentation
 - [ ] Interface for dynamic configuration (cron, users, etc) ?

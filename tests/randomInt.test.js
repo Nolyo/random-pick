@@ -1,5 +1,6 @@
 import { randomIntFromInterval } from "../src/utils";
 import { faker } from "@faker-js/faker";
+import { expect, test } from "@jest/globals";
 
 test("with great params", () => {
   const min = faker.number.int(1, 5);

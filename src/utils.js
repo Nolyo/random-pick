@@ -15,6 +15,7 @@ export function makeEmbed(members, data) {
       inline: true,
     });
   }
+
   const exampleEmbed = {
     color: parseInt(data.classicMessage.color, 16),
     title: data.classicMessage.title,

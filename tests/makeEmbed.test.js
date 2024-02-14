@@ -1,3 +1,4 @@
+import { expect, test } from "@jest/globals";
 import { makeEmbed } from "../src/utils";
 import { faker } from "@faker-js/faker";
 

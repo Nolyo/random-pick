@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2023,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "parser": "@babel/eslint-parser",
+  "ignorePatterns": ["node_modules/", "dist/"],
+  "rules": {}
+}

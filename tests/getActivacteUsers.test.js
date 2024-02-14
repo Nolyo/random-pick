@@ -1,4 +1,5 @@
 import { getActivedUsers } from "../src/utils";
+import { expect, test } from "@jest/globals";
 
 test("Return correct filtered list of activated users", () => {
   const users = [
