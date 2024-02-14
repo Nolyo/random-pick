@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import Discord, { WebhookClient, Events } from "discord.js";
 import { scheduleJobs } from "./utils.js";
-// eslint-disable-next-line
 import * as data from "./config.json" assert { type: "json" };
 
 const intents = new Discord.IntentsBitField(3276799);
