@@ -31,12 +31,16 @@ export function makeEmbed(members, data) {
 }
 
 export function randomIntFromInterval(min, max) {
+  if (typeof min !== "number" || typeof max !== "number") {
+    return Math.floor(Math.random() * 10 + 1);
+  }
+
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export function getActivedUsers(users) {
   return users
-    .filter((member) => member.activated == "true")
+    .filter((member) => member.activated == "true" && member.name !== undefined)
     .map((member) => member.name);
 }
 

@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "dev": "node --watch ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest --watch"
   },
   "dependencies": {
     "discord.js": "^14.6.0",
@@ -18,5 +18,9 @@
   "keywords": [],
   "author": "Nolyo",
   "url": "https://github.com/Nolyo/random-pick",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "jest": "^29.7.0"
+  }
 }
